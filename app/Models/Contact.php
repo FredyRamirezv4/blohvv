@@ -1,0 +1,15 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Contact extends Model
+{
+    protected $table = 'tabla_datos'; // Nombre de la tabla en la base de datos
+
+    protected $fillable = [
+        'nombre', 'correo', 'telefono', 'empresa', 'direccion', 'nit', 'mensaje'
+    ];
+}
