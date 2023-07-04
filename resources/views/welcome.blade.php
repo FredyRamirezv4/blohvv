@@ -4,21 +4,28 @@
     <title>Blog Fredy Ramirez</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
+
+
 <!-- Header -->
 <header class="header" id="HojaDeVida">
+     
     <img src="{{ asset('icons/bx-menu.svg') }}" alt="menu" class="bx-menu">
     <div class="headContainer">
         <h1 class="titulo">Fredy Ramirez</h1>
         <p>Hoja de vida</p>
+       
     </div>
 
     <!-- Nav -->
@@ -35,14 +42,17 @@
 
 <!-- Main -->
 <main>
+    
     <article class="articleContainer" id="service">
         <header class="headerContainer"></header>
     </article>
     <div class="profile">
-        <p>Tecnólogo en gestión bibliotecaria del Servicio Nacional de Aprendizaje. Mi experiencia laboral incluye trabajar en la Secretaría de Salud de Bogotá, donde adquirí conocimientos y habilidades en el manejo de documentación y procesos administrativos específicos del sector de la salud, he desempeñado labores en el repositorio institucional (SENA) y brinde apoyo a los servicios de la biblioteca del Centro de Gestión Administrativa Regional Bogotá.<br>
-            Además de mi experiencia en bibliotecas, poseo conocimientos en revistas científicas y estoy familiarizado con los estándares y procesos de indexación de artículos (OJS). Tengo experiencia en la búsqueda, selección y organización de artículos científicos relevantes para apoyar la investigación y la toma de decisiones en entornos académicos y profesionales.<br>
-            En términos de programación web, cuento con habilidades en PHP, HTML, JavaScript, CSS y Bases de Datos.<br>
-            Además de mis conocimientos técnicos, soy una persona responsable y organizada. Poseo habilidades de comunicación y de trabajo en equipo, lo que me permite colaborar de manera efectiva con colegas, clientes y usuarios.
+        <p>Tecnólogo en gestión bibliotecaria del Servicio Nacional de Aprendizaje. Con conocimientos y habilidades en el manejo de documentación y procesos administrativos, he desempeñado labores en el repositorio institucional (SENA). <br>
+            Además de mis experiencias en bibliotecas, poseo conocimientos en revistas científicas y estoy familiarizado con los estándares y procesos de indexación de artículos científicos (OJS). Tengo experiencia en la búsqueda, selección y organización de artículos científicos relevantes para apoyar la investigación y la toma de decisiones en entornos académicos y profesionales.<br>
+            En términos de programación web, cuento con habilidades en PHP, HTML, JavaScript, CSS y Bases de Datos.
+            Además de mis conocimientos técnicos, soy una persona responsable y organizada. Poseo habilidades de comunicación y de trabajo en equipo, lo que me permite colaborar de manera efectiva con colegas, clientes y usuarios.<br>
+            Mi experiencia laboral incluye trabajar en la Secretaría de Salud de Bogotá y la biblioteca del Centro de Gestión Administrativa Regional Bogotá.
+            
         </p>
     </div>
     <div class="imgbox">
@@ -122,6 +132,26 @@
         </section>
     </article>
 </main>
+{{-- login --}}
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
 
 <footer id="contact" class="footerContainer">
     <div class="footerContent">
@@ -142,6 +172,8 @@
 
 <script src="/js/main.js"></script>
 <script src="/js/imgBox.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
 
 <a class="credits" href="https://www.flaticon.es/iconos-gratis/desarrollo-de-software"
     title="desarrollo de software iconos">Iconos creados por kerismaker</a>
