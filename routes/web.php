@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use Illuminate\Support\Facades\Auth;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,16 +16,16 @@ use App\Http\Controllers\ContactController;
 |
 */
 
-Route::get('/', function () {return view('welcome'); })->name('welcome');
+// Route::get('/', function () {return view('welcome'); })->name('welcome');
 
-Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
+// Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
 
-Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
-
-
+// Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
 
 
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
